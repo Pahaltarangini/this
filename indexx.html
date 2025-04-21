@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do You Love Me?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffe6e6;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            color: #ff3366;
+            font-size: 3em;
+            text-shadow: 2px 2px #ff99aa;
+        }
+
+        .heart {
+            color: red;
+            font-size: 2em;
+            animation: beat 1s infinite;
+        }
+
+        @keyframes beat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        button {
+            background-color: #ff3366;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 10px;
+            box-shadow: 2px 2px 5px #888888;
+        }
+
+        button:hover {
+            background-color: #ff6699;
+        }
+
+        .evil-eye {
+            font-size: 1.5em;
+            color: #000;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Do You Love Me? <span class="heart">❤️</span></h1>
+    <button onclick="askGirlfriend()">Yes</button>
+    <button onclick="rejectLove()">No</button>
+
+    <div class="evil-eye">👁️‍🗨️👁️‍🗨️👁️‍🗨️</div>
+
+    <script>
+        function askGirlfriend() {
+            const response = confirm("WILL YOU BE MY GIRLFRIEND?");
+            if (response) {
+                alert("Yay! You said YES! ❤️");
+            } else {
+                alert("Error. Option not favoured by her. 💔");
+            }
+        }
+
+        function rejectLove() {
+            alert("Error. Option not favoured by her. 💔");
+        }
+    </script>
+</body>
+</html>
